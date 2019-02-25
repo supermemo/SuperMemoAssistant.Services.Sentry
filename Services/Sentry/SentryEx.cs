@@ -38,7 +38,7 @@ using Serilog;
 
 namespace SuperMemoAssistant.Services.Sentry
 {
-  public static class Sentry
+  public static class SentryEx
   {
     #region Constants & Statics
 
@@ -51,7 +51,7 @@ namespace SuperMemoAssistant.Services.Sentry
 
     #region Methods
 
-    public static LoggerConfiguration ConfigureSerilog(LoggerConfiguration config)
+    public static LoggerConfiguration LogToSentry(this LoggerConfiguration config)
     {
       return config.WriteTo.Sentry();
     }
