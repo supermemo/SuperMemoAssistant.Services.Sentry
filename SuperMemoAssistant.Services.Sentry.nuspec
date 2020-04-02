@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/supermemo/SuperMemoAssistant</projectUrl>
 
     <id>SuperMemoAssistant.Services.Sentry</id>
-    <title>SuperMemo Assistant Sentry ServiceSentry</title>
+    <title>SuperMemo Assistant Sentry Service</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Facilitate bug reporting with Sentry</description>
     <copyright></copyright>
