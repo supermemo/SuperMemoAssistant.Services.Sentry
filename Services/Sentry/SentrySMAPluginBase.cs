@@ -54,7 +54,7 @@ namespace SuperMemoAssistant.Services.Sentry
     {
       var pluginType = typeof(TPlugin);
       // ReSharper disable once VirtualMemberCallInConstructor
-      var releaseName = $"{Name}@{pluginType.GetAssemblyVersion()}";
+      var releaseName = pluginType.GetAssemblyVersion();
 
       _sentry = SentryEx.Initialize(sentryId, releaseName);
     }
@@ -65,6 +65,10 @@ namespace SuperMemoAssistant.Services.Sentry
       try
       {
         _sentry.Dispose();
+      }
+      catch (OperationCanceledException)
+      {
+        // Ignore
       }
       catch (Exception ex)
       {

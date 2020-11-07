@@ -43,7 +43,7 @@ namespace SuperMemoAssistant.Services.Sentry
   {
     #region Constants & Statics
 
-    private static User   _user;
+    private static User _user;
 
 
     public static string DeviceId { get; } = GetSystemFingerprint();
