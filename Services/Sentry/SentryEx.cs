@@ -75,7 +75,7 @@ namespace SuperMemoAssistant.Services.Sentry
 #if DEBUG
           //o.Debug = true;
 #endif
-          o.Dsn        = new Dsn(sentryId);
+          o.Dsn        = sentryId;
           o.Release    = releaseName;
           o.BeforeSend = BeforeSend;
         });
